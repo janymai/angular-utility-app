@@ -1,0 +1,22 @@
+<div class="container">
+  <p>This is a draw line chart example</p>
+  <p>Type point to draw chart</p>
+
+  <form role="form" name="formChart" novalidate>
+    <div ng-repeat="valuePoint in valuePoints track by $index">
+      <input type="text" name="chartValue{{$index}}" ng-model="valuePoints[$index]"/>
+      <div class="error-message">
+        <p>This field is required.</p>
+      </div>
+    </div>
+    <div>
+      <button ng-click="drawChart(formChart, valuePoints)">Draw</button>
+    </div>
+  </form>
+
+  <p>Results</p>
+
+  <div>
+    <highchart config="chart"></highchart>
+  </div>
+</div>
