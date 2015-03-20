@@ -8,8 +8,8 @@ angular.module('utilityApp')
       detail: 'This is an example about drawchart, with input are points to draw and output will be a chart.'
     },
     {
-      title: 'Draw multi line Chart',
-      href: 'drawMultiChart',
+      title: 'Draw multi chart',
+      href: 'drawchart',
       detail: 'This is an example about drawchart, with input are array contain maps point and output will be show more chart'
     },
     {

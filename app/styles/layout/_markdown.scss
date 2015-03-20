@@ -1,0 +1,6 @@
+
+.markdown {
+  .block-content {
+    @include size(100%, 200px);
+  }
+}

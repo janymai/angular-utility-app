@@ -18,26 +18,26 @@ angular.module('utilityApp')
             series: [{
               data: mapSeri,
               enableMouseTracking: false,
-              color: '#cacaca',
+              color: '#333',
               marker: {
                 enabled: false
               }
             }],
             loading: false,
             yAxis: {
-              lineColor: '#cacaca',
+              lineColor: '#333',
               lineWidth: 1,
               gridLineWidth: null,
               title: null
             },   
             xAxis: {
-              lineColor: '#cacaca',
+              lineColor: '#333',
               lineWidth: 1,
               tickWidth: 0
             },
             size: {
-              width: '400',
-              height: '300'
+              width: '500',
+              height: '350'
             }
           };
           

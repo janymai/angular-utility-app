@@ -10,9 +10,12 @@ angular.module('utilityApp')
       $scope,
       drawchart
     ) {
+      $rootScope.parentPage = 'utility';
+      $scope.retrySubmit = false;
       $scope.valuePoints = ['', '', '', '', ''];
 
       $scope.drawChart = function (formChart, data) {
+        $scope.retrySubmit = true;
         if (formChart.$valid) {
           var data = data;
           var convertData = data.map(function (value) {

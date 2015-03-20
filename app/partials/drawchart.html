@@ -1,19 +1,32 @@
+<div ng-include="'partials/collections/utilitySubMenu.html'"></div>
 <div class="container">
-  <p>This is a draw line chart example</p>
+
+  <h3>This is a draw line chart example</h3>
   <p>Type point to draw chart</p>
 
-  <form role="form" name="formChart" novalidate>
-    <div ng-repeat="valuePoint in valuePoints track by $index">
-      <input type="text" name="chartValue{{$index}}" ng-model="valuePoints[$index]" ng-pattern="/^[0-9]+$/" required/>
-    </div>
-    <div>
-      <button ng-click="drawChart(formChart, valuePoints)">Draw</button>
-    </div>
-  </form>
+  <div class="row">
+    <form class="col-md-8 col-md-offset-2"
+          role="form" 
+          name="formChart" 
+          ng-class="{'retry-submit': retrySubmit}"
+          novalidate>
+      <div class="form-group"
+           ng-repeat="valuePoint in valuePoints track by $index">
+        <label><big>Value {{$index}}</big></label>
+        <input class="form-control" 
+               type="text" 
+               name="chartValue{{$index}}" 
+               ng-model="valuePoints[$index]" 
+               ng-pattern="/^[0-9]+$/" 
+               required/>
+      </div>
+      <div class="color-swatches pull-right">
+        <button class="btn btn-lg gray-dark" ng-click="drawChart(formChart, valuePoints)">Draw Chart</button>
+      </div>
+    </form>
+  </div>
 
-  <p>Results</p>
-
-  <div ng-repeat="chart in charts track by $index">
-    <highchart config="charts[$index]"></highchart>
+  <div class="row" ng-repeat="chart in charts track by $index">
+    <highchart class="col-md-8 col-md-offset-2" config="charts[$index]"></highchart>
   </div>
 </div>

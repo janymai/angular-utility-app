@@ -1,8 +1,17 @@
-<div class="container">
-  <p>This is a mark down example</p>
+<div ng-include="'partials/collections/utilitySubMenu.html'"></div>
+<div class="container markdown">
+  <h3>This is a mark down example</h3>
   <p>Type point to draw chart</p>
 
-  <textarea ng-model="content"></textarea>
-
-  <div data-sd-model-to-html="content || '' "></div>
+  <div class="row">
+    <div class="col-md-8">
+      <textarea class="block-content" ng-model="content"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+      <h3>Content preview</h3>
+    </div>
+    <div class="col-md-8" data-sd-model-to-html="content || '' "></div>
+  </div>
 </div>

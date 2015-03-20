@@ -32,7 +32,7 @@ angular.module('utilityApp', [
         controller: 'DrawMultiChartCtrl'
       })
       .state('markdown', {
-        url: '/drawchart',
+        url: '/markdown',
         templateUrl: '/partials/markdown.html'
       });
 

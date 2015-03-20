@@ -1,0 +1,21 @@
+.thumbnail-container {
+
+  a {
+    text-decoration: none;
+  }
+
+  .thumbnail {
+    height: 450px;
+  }
+
+  .block-info {
+    h3 {
+      color: $back;
+    }
+    padding: 100px 0;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+}

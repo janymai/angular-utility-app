@@ -2,3 +2,14 @@ body {
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.retry-submit {
+  .ng-invalid,
+  .ng-invalid-pattern {
+    border: 1px solid $brand-danger;
+  }
+}
+
+.sub-header {
+  margin-top: -20px;
+}
