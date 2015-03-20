@@ -13,14 +13,16 @@ angular.module('utilityApp')
       $scope.valuePoints = ['', '', '', '', ''];
 
       $scope.drawChart = function (formChart, data) {
-        var data = data;
-        var convertData = data.map(function (value) {
-          var value = parseInt(value);
-          return value;
-        });
-        var charts = [];
-        charts.push(convertData);
-        $scope.charts = drawchart.lineChart(charts);
+        if (formChart.$valid) {
+          var data = data;
+          var convertData = data.map(function (value) {
+            var value = parseInt(value);
+            return value;
+          });
+          var charts = [];
+          charts.push(convertData);
+          $scope.charts = drawchart.lineChart(charts);
+        }
       };
     }
   ]);

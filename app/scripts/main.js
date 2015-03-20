@@ -2,7 +2,8 @@
 
 angular.module('utilityApp', [
   'ui.router',
-  'highcharts-ng'
+  'highcharts-ng',
+  'Showdown'
 ])
   .config(function (
     $stateProvider,
@@ -13,15 +14,12 @@ angular.module('utilityApp', [
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: '/partials/home.html'
-      })
-      .state('aboutMe', {
-        url: '/about-me',
-        templateUrl: '/partials/home1.html'
+        templateUrl: '/partials/home.html',
+        controller: 'HomeCtrl'
       })
       .state('contact', {
         url: '/contact',
-        templateUrl: '/partials/home1.html'
+        templateUrl: '/partials/contact.html'
       })
       .state('drawchart', {
         url: '/drawchart',
@@ -35,11 +33,7 @@ angular.module('utilityApp', [
       })
       .state('markdown', {
         url: '/drawchart',
-        templateUrl: '/partials/home1.html'
-      })
-      .state('dragDrop', {
-        url: '/drag-drop',
-        templateUrl: '/partials/home1.html'
+        templateUrl: '/partials/markdown.html'
       });
 
     $urlRouterProvider.otherwise('/');
