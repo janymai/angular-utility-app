@@ -16,7 +16,7 @@
 
   <p>Results</p>
 
-  <div>
-    <highchart config="chart"></highchart>
+  <div ng-repeat="chart in charts track by $index">
+    <highchart config="charts[$index]"></highchart>
   </div>
 </div>

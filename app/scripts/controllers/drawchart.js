@@ -10,12 +10,12 @@ angular.module('utilityApp')
       $scope,
       drawchart
     ) {
-      console.log('draw chart');
       $scope.valuePoints = ['', '', '', '', ''];
+
       $scope.drawChart = function (formChart, data) {
-        console.log(data);
-        $scope.chart = drawchart.lineChart(data);
-        console.log(drawchart.lineChart(data));
+        var data = [[1,3,4,5,6], [1,2,3,4,5]];
+        $scope.charts = drawchart.lineChart(data);
+        // console.log($scope.chart);
       };
     }
   ]);
