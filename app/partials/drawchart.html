@@ -4,10 +4,7 @@
 
   <form role="form" name="formChart" novalidate>
     <div ng-repeat="valuePoint in valuePoints track by $index">
-      <input type="text" name="chartValue{{$index}}" ng-model="valuePoints[$index]"/>
-      <div class="error-message">
-        <p>This field is required.</p>
-      </div>
+      <input type="text" name="chartValue{{$index}}" ng-model="valuePoints[$index]" ng-pattern="/^[0-9]+$/" required/>
     </div>
     <div>
       <button ng-click="drawChart(formChart, valuePoints)">Draw</button>

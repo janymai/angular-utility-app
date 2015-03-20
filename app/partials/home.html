@@ -1,54 +1,15 @@
 <div class="container"> 
   <div class="bs-example" data-example-id="thumbnails-with-custom-content">
     <div class="row">
-      <div class="col-sm-6 col-md-3">
-        <a ui-sref="drawchart">
+      <div class="col-sm-6 col-md-4" ng-repeat="homeContent in homeContents track by $index">
+        <a ui-sref="{{homeContent.href}}">
           <div class="thumbnail">
             <div>
-              <p><big>Draw Chart</big></p>
+              <p><big>{{homeContent.title}}</big></p>
             </div>
             <div class="caption">
-              <h3 id="thumbnail-label">Draw Chart</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a ui-sref="drawMultiChart">
-          <div class="thumbnail">
-            <div>
-              <p><big>Draw multie line Chart</big></p>
-            </div>
-            <div class="caption">
-              <h3 id="thumbnail-label">Draw Chart</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a ui-sref="markdown">
-          <div class="thumbnail">
-            <div>
-              <p><big>Mark down</big></p>
-            </div>
-            <div class="caption">
-              <h3 id="thumbnail-label">Mark down</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-sm-6 col-md-3">
-        <a ui-sref="dragDrop">
-          <div class="thumbnail">
-            <div>
-              <p><big>Drag and Drop</big></p>
-            </div>
-            <div class="caption">
-              <h3 id="thumbnail-label">Drag and Drop</h3>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <h3 id="thumbnail-label">{{homeContent.title}}</h3>
+              <p>{{homeContent.detail}}</p>
             </div>
           </div>
         </a>

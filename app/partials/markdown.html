@@ -1,10 +1,8 @@
-<p>This is a mark down example</p>
-<p>Type point to draw chart</p>
+<div class="container">
+  <p>This is a mark down example</p>
+  <p>Type point to draw chart</p>
 
-<input type="text"/>
-<input type="text"/>
-<input type="text"/>
-<input type="text"/>
-<input type="text"/>
+  <textarea ng-model="content"></textarea>
 
-<p>Results</p>
+  <div data-sd-model-to-html="content || '' "></div>
+</div>
