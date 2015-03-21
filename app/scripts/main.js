@@ -2,8 +2,8 @@
 
 angular.module('utilityApp', [
   'ui.router',
-  'highcharts-ng',
-  'Showdown'
+  'highcharts-ng'
+  
 ])
   .config(function (
     $stateProvider,
@@ -28,7 +28,7 @@ angular.module('utilityApp', [
       })
       .state('drawMultiChart', {
         url: '/drawMultiChart',
-        templateUrl: '/partials/drawMultiChart.html',
+        templateUrl: '/partials/draw-multi-chart.html',
         controller: 'DrawMultiChartCtrl'
       })
       .state('markdown', {

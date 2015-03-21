@@ -4,6 +4,7 @@ angular.module('utilityApp')
   .factory('drawchart',[ function () {
     return {
       lineChart: function (mapSeries) {
+        console.log('mapp');
         var chart,
             charts = [];
         var mapSeries = mapSeries;

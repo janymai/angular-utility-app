@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 angular.module('utilityApp')
   .controller('DrawMultiChartCtrl', [
@@ -10,7 +10,6 @@ angular.module('utilityApp')
       $scope,
       drawchart
     ) {
-      console.log('drawchart');
       $rootScope.parentPage = 'utility';
       $scope.dataCharts = [[40,25,67,15,56], [11,22,3,44,25], [15,26,23,24,55]];
       

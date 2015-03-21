@@ -1,0 +1,9 @@
+<div ng-include="'/partials/collections/utilitySubMenu.html'"></div>
+<div class="container">
+
+  <h3>This is a draw multi line chart example</h3>
+
+  <div class="row " ng-repeat="chart in charts track by $index">
+    <highchart class="panel-body col-md-8 col-md-offset-2" config="charts[$index]"></highchart>
+  </div>
+</div>

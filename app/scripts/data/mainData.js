@@ -9,7 +9,7 @@ angular.module('utilityApp')
     },
     {
       title: 'Draw multi chart',
-      href: 'drawchart',
+      href: 'drawMultiChart',
       detail: 'This is an example about drawchart, with input are array contain maps point and output will be show more chart'
     },
     {
