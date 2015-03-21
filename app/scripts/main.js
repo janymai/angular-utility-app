@@ -3,7 +3,6 @@
 angular.module('utilityApp', [
   'ui.router',
   'highcharts-ng'
-  
 ])
   .config(function (
     $stateProvider,
@@ -21,6 +20,10 @@ angular.module('utilityApp', [
         url: '/contact',
         templateUrl: '/partials/contact.html'
       })
+      .state('aboutMe', {
+        url: '/aboutme',
+        templateUrl: '/partials/aboutme.html'
+      })
       .state('drawchart', {
         url: '/drawchart',
         templateUrl: '/partials/drawchart.html',
@@ -33,7 +36,8 @@ angular.module('utilityApp', [
       })
       .state('markdown', {
         url: '/markdown',
-        templateUrl: '/partials/markdown.html'
+        templateUrl: '/partials/markdown.html',
+        controller: 'MarkDownCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
