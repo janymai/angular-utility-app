@@ -1,4 +1,4 @@
-## This is an example apply AngularJs
+## This is an example apply AngularJs to draw a simple chart
 
 * How to run it
 
@@ -7,4 +7,4 @@
 * 3. run ``bower install``
 * 4. run ``grunt serve``
 
-## Yah! Say hello with my demo 
+## Yah! Say hello with 
